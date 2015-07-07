@@ -2,16 +2,21 @@
     CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <title>OpenStreetMap - Simple way to create an Offline Web Based Offline Maps</title>
+
+    <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/OpenLayers.js" type="text/javascript"></script>    
+    <script src="Scripts/mapUtility.js" type="text/javascript"></script>
+    <script src="OLAPI/OpenLayers.js" type="text/javascript"></script>
 </asp:Content>
-<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <h2>
-        Welcome to ASP.NET!
-    </h2>
-    <p>
-        To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
-    </p>
-    <p>
-        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
-            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
-    </p>
+<asp:Content ID="BodyContent" runat="server" onload="Load()"  ContentPlaceHolderID="MainContent">
+    
+     <h3>
+
+        Creating Offline Maps in Web Based Application - OpenLayers</h3>
+
+    <div id="map-canvas" style="width: auto; height: 500px;">
+
+    </div>
+
 </asp:Content>
